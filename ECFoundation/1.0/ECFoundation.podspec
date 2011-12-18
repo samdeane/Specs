@@ -27,13 +27,13 @@ Pod::Spec.new do |s|
   s.subspec 'ECAnalytics' do |eccore|
     eccore.description = 'Generic analytics engine, with support for various Analytics and Crash Reporting SDKs'
     eccore.source_files = 'Modules/ECAnalytics/iOS/*.{h,m}'
-    eccore.dependencies = 'ECFoundation/ECCore'
+    eccore.dependency 'ECFoundation/ECCore'
   end
   
   s.subspec 'ECLogging' do |eccore|
     eccore.description = 'Logging system supporting multiple named channels, multiple log handers'
     eccore.source_files = 'Mofules/ECLogging/Generic/*.{h,m}', 'Modules/ECLogging/iOS/*.{h,m}'
-    eccore.dependencies = 'ECFoundation/ECCore'
+    eccore.dependency 'ECFoundation/ECCore'
   end
 
 end
