@@ -7,7 +7,7 @@
 Pod::Spec.new do |s|
   s.name     = 'ECFoundation'
   s.version  = '1.0'
-  s.license  = 'MIT'
+  s.license  = 'http://www.elegantchaos.com/license/liberal'
   s.summary  = 'A collection of Cocoa utility classes from Elegant Chaos'
   s.homepage = 'http://github.com/samdeane/ECFoundation/wiki'
   s.author   = { 'Sam Deane' => 'sam@elegantchaos.com' }
@@ -15,13 +15,9 @@ Pod::Spec.new do |s|
 
   s.clean_paths = 'Extras'
 
-  def s.copy_header_mapping(from)
-    from.relative_path_from(Pathname.new('Modules'))
-  end
-
   s.subspec 'ECCore' do |eccore|
     eccore.description = 'Core utilities'
-    eccore.source_files = 'Modules/ECCore/Generic/*.{h,m}', 'Modules/ECCore/iOS/*.{h,m}'
+    eccore.source_files = 'Modules/ECCore/Generic/*.{h,m}', 'Modules/ECCore/iOS/*.{h,m}', 'Modules/ECCore/Prefix'
   end
 
   s.subspec 'ECAnalytics' do |ecanalytics|
