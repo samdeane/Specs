@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.author   = { 'Sam Deane' => 'sam@elegantchaos.com' }
   s.source   = { :git => 'git@github.com:samdeane/ECFoundation.git', :tag => '1.0' }
 
+  s.clean_paths = 'Extras'
+
   def s.copy_header_mapping(from)
     from.relative_path_from(Pathname.new('Modules'))
   end
