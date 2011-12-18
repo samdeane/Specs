@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.subspec 'ECCore' do |eccore|
     eccore.description = 'Core utilities'
     eccore.source_files = 'Modules/ECCore/Generic/*.{h,m}', 'Modules/ECCore/iOS/*.{h,m}', 'Modules/ECCore/Prefix/*.pch'
-    eccore.xcconfig = { 'GCC_PREFIX_HEADER' => '$(PODS_ROOT)/ECFoundation/Modules/ECCore/Prefix/$(CONFIGURATION)Prefix.pch' }
+    eccore.xcconfig = { 'GCC_PREFIX_HEADER' => '$(PODS_ROOT)/ECFoundation/Modules/ECCore/Prefix/ECCore$(CONFIGURATION)Prefix.pch' }
   end
 
   s.subspec 'ECAnalytics' do |ecanalytics|
